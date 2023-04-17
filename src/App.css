@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  font-weight: bold;
+  color: #692aa9;
+}
+
+/* @media screen and (min-width: 1200px) {
+  #header-img {
+    padding-bottom: 500px;
+  }
+} */
+
+@media screen and (max-width: 1000px) {
+  #about-img{
+    display: none;
   }
 }
