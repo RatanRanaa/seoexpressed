@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import Model from 'react-modal'
 import { Link, NavLink } from 'react-router-dom'
+
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -9,16 +11,44 @@ const Navbar = () => {
     <>
       <nav className=" w-screen bg-white md:block xl:block hidden">
         <div className=" flex items-center justify-between">
-          <div className=" flex">
+          <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            // delay: 1,
+            duration: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001
+            }
+          }}
+          // animate={{ rotate: 360 }} transition={{ delay: 1 , type: "spring", stiffness: 100 }} 
+          
+          className=" flex">
             <Link className=" flex" to="/">
               <img src="/images/_Downloader.webp" alt="logo" width={80} />
-              <h1 className=" pt-5 font-bold text-2xl text-gray-400">
+              <h1  className=" pt-5 font-bold text-2xl text-gray-400">
               EXPRESSED
               </h1>
             </Link>
-          </div>
+          </motion.div>
           <div>
-            <ul className=" flex">
+            <motion.ul      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        // delay: 1,
+        duration: 0.3,
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: "spring",
+          damping: 5,
+          stiffness: 100,
+          restDelta: 0.001
+        }
+      }} className=" flex">
               <NavLink
                 to="/"
                 className=" mx-2 font-semibold text-[18px] cursor-pointer hover:text-[#9e3ffd]"
@@ -40,16 +70,29 @@ const Navbar = () => {
               >
                 Blog
               </NavLink>
-            </ul>
+            </motion.ul>
           </div>
           <div>
-            <button
+            <motion.button
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              // delay: 1,
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
               onClick={() => setIsopenModel(true)}
               className=" mx-4 py-3 px-4 z-20"
             >
               <i className="fa-solid fa-user mr- bg-blue-600 text-white rounded-full text-[16px] p-[8px]"></i>{' '}
               Log IN
-            </button>
+            </motion.button>
             <Model
               isOpen={isopenModel}
               onRequestClose={() => setIsopenModel(false)}
@@ -113,14 +156,28 @@ const Navbar = () => {
                 Close Model
               </button>
             </Model>
-            <button className=" border py-3 px-4 mr-5 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
+            <motion.button
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              // delay: 1,
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
+            className=" border py-3 px-4 mr-5 bg-[#8d57f7] font-medium text-white text-[18px] rounded-3xl">
               
               <a href="https://accounts.google.com/" target="_main">
               {/* https://mail.google.com */}
               {/* mailto:your_email_address@gmail.com */}
                 Contact Now
               </a>
-            </button>
+            </motion.button>
           </div>
         </div>
       </nav>
@@ -129,7 +186,20 @@ const Navbar = () => {
         <div className="flex h-full justify-between mx-10">
           <div>
             <Link to="/">
-              <img
+              <motion.img
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            // delay: 1,
+                            duration: 0.3,
+                            ease: [0, 0.71, 0.2, 1.01],
+                            scale: {
+                              type: "spring",
+                              damping: 5,
+                              stiffness: 100,
+                              restDelta: 0.001
+                            }
+                          }}
                 onClick={() => setShow(!show)}
                 src="/images/_Downloader.webp"
                 width={100}
@@ -268,7 +338,20 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div
+          <motion.div
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        // delay: 1,
+                        duration: 0.3,
+                        ease: [0, 0.71, 0.2, 1.01],
+                        scale: {
+                          type: "spring",
+                          damping: 5,
+                          stiffness: 100,
+                          restDelta: 0.001
+                        }
+                      }}
             className=" mt-8 text-2xl cursor-pointer"
             onClick={() => setShow(!show)}
           >
@@ -277,7 +360,7 @@ const Navbar = () => {
             ) : (
               <i className="fa-solid fa-bars"></i>
             )}
-          </div>
+          </motion.div>
         </div>
       </nav>
     </>

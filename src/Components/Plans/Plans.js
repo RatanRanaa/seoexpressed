@@ -127,9 +127,118 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="container mx-auto mt-10">
-        <div className="grid gap-x-8 grid-cols-1 md:grid-cols-3">
-          <div className="border w-full md:w-90 mx-auto flex flex-col items-center overflow-hidden">
+      <div>
+        <div className="flex flex-col md:flex-row md:justify-center mt-10">
+          <div className="border mx-2 h-full md:w-80 flex flex-col items-center overflow-hidden mb-4 md:mb-0 ">
+            <h1 className="my-4 text-2xl font-bold tracking-widest">
+            Diamond plan
+            </h1>
+            <div className="flex items-center">
+              <pre className="text-xl">$</pre>
+              <h1 className="text-6xl font-bold">19</h1>
+            </div>
+            <h1 className=" text-2xl font-medium">Every Month</h1>
+            <h1 className="py-5 font-medium">Everything in Gold Plan + More</h1>
+            <h1 className="font-light">1-day free trial</h1>
+            <button className="border px-12 mt-6 mb-5 py-1 bg-[#9e3ffd] text-white tracking-widest">
+              Start Free Trial
+            </button>
+            <h1 className="border-t-2 px-8 md:px-12 pt-6 font-light">
+              Everything in Silver plan
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Storyblocks
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Helium 10
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Jungle Scout
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Canva Pro
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Pickmonkey
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Storyblocks
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Helium 10
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Jungle Scout
+            </h1>
+            <h1 className="font-light">
+              <i className="px-3 text-[#9e3ffd] fa-sharp fa-solid fa-circle-check py-3"></i>{" "}
+              Canva Pro
+            </h1>
+          </div>
+          <div className="border mx-2 h-full md:w-80 flex flex-col items-center overflow-hidden mb-4 md:mb-0">
+            <h1 className="my-4 text-2xl font-bold tracking-widest">
+            Semrush Guru
+            </h1>
+            <div className="flex items-center">
+              <pre className="text-xl">$</pre>
+              <h1 className="text-6xl font-bold">29</h1>
+            </div>
+            <h1 className=" text-2xl font-medium">Every Month</h1>
+            <h1 className="pt-5 font-medium mb-6">Everything in Gold Plan + More</h1>
+            {/* <h1 className="font-light mb-6">+ More</h1> */}
+            <h1 className="font-light">1-day free trial</h1>
+            <button className="border px-12 mt-6 mb-5 py-1 bg-[#9e3ffd] text-white tracking-widest">
+              Start Free Trial
+            </button>
+            <h1 className="border-t-2 px-12 pt-6 font-light flex items-center">
+              <i className="text-[#9e3ffd] fas fa-check-circle px-3"></i>
+              Everything in Silver Plan
+            </h1>
+            <h1 className="pt-4 font-light flex items-center">
+              <i className="text-[#9e3ffd] fas fa-check-circle px-3"></i>
+              Semrush Gurru
+            </h1>
+            
+          </div>
+          <div className="border mx-2 h-full md:w-80 flex flex-col items-center overflow-hidden mb-4 md:mb-0">
+            <h1 className="my-4 text-2xl font-bold tracking-widest">
+            Semrush Business
+            </h1>
+            <div className="flex items-center">
+              <pre className="text-xl">$</pre>
+              <h1 className="text-6xl font-bold">49</h1>
+            </div>
+            <h1 className=" text-2xl font-medium">Every Month</h1>
+            <h1 className="pt-5 font-medium mb-6">Everything in Gold Plan</h1>
+            {/* <h1 className="font-light mb-6">+ More</h1> */}
+            <h1 className="font-light">1-day free trial</h1>
+            <button className="border px-12 mt-6 mb-5 py-1 bg-[#9e3ffd] text-white tracking-widest">
+              Start Free Trial
+            </button>
+            <h1 className="border-t-2 px-6 pt-6 font-light flex items-center">
+              <i className="text-[#9e3ffd] fas fa-check-circle px-3"></i>
+              Everything in Silver Plan
+            </h1>
+            <h1 className="pt-4 font-light flex items-center">
+              <i className="text-[#9e3ffd] fas fa-check-circle px-3"></i>
+              Semrush Business
+            </h1>
+          </div>
+        </div>
+      </div>
+
+
+      {/* <div className="container mx-auto mt-10">
+        <div className="grid gap-x-0 grid-cols-1 md:grid-cols-3">
+          <div className="border w-full md:w-80 mx-auto flex flex-col items-center overflow-hidden">
             <h1 className="my-4 text-2xl font-bold ">Diamond plan</h1>
             <div className="flex">
               <pre>$</pre>
@@ -183,7 +292,7 @@ const Plans = () => {
               Canva Pro
             </h1>
           </div>
-          <div className="border w-full md:w-90 mx-auto flex flex-col items-center overflow-hidden mt-10 md:mt-0">
+          <div className="border w-full md:w-80 mx-auto flex flex-col items-center overflow-hidden mt-10 md:mt-0">
             <h1 className="my-4 text-2xl font-bold">Semrush Guru</h1>
             <div className="flex">
               <pre>$</pre>
@@ -205,7 +314,7 @@ const Plans = () => {
               Semrush Gurru
             </h1>
           </div>
-          <div className="border w-full md:w-90 mx-auto flex flex-col items-center overflow-hidden mt-10 md:mt-0">
+          <div className="border w-full md:w-80 mx-auto flex flex-col items-center overflow-hidden mt-10 md:mt-0">
             <h1 className="my-4 text-2xl font-bold">Semrush Business</h1>
             <div className="flex">
               <pre>$</pre>
@@ -228,10 +337,10 @@ const Plans = () => {
             </h1>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="container mt-10">
-        <div className="grid gap-x- grid-cols-1 md:grid-cols-3">
+      <div className="container mt-10 m-auto">
+        <div className="grid gap-x-0 grid-cols-1 md:grid-cols-3">
           <div className="border w-90 mx-auto flex items-center flex-col overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">
               Diamond plan
@@ -289,7 +398,7 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="container mt-10 px-4 sm:px-6 lg:px-8">
+      <div className="container mt-10 px-4 sm:px-6 lg:px-8 m-auto">
         <div className="grid gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
           <div className="border max-w-xs mx-auto flex items-center flex-col overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">Woorank</h1>
@@ -346,7 +455,7 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="container mt-10">
+      <div className="container mt-10 m-auto">
         <div className="grid gap-x-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="border w-80 mt-2 mx-auto flex items-center flex-col overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">Copy.ai</h1>
@@ -401,7 +510,7 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="container mt-10">
+      <div className="container mt-10 m-auto">
         <div className="grid gap-x-4 grid-cols-1 md:grid-cols-3">
           <div className="border w-90 mx-auto flex items-center flex-col overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">
@@ -457,7 +566,8 @@ const Plans = () => {
           </div>
         </div>
       </div>
-      <div className="container mt-10">
+
+      <div className="container mt-10 m-auto">
         <div className="grid gap-x-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           <div className="border w-90 mx-auto flex items-center flex-col overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">ADSPY</h1>
@@ -512,9 +622,9 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="container mx-auto mt-10">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          <div className="flex flex-col items-center border overflow-hidden">
+      <div className="container mx mt-10 m-auto">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="flex flex-col w-60 m-auto items-center border overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">
               Envato Elements
             </h1>
@@ -532,7 +642,7 @@ const Plans = () => {
               Envato Elements
             </h1>
           </div>
-          <div className="flex flex-col items-center border overflow-hidden">
+          <div className="flex flex-col w-60 m-auto items-center border overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">
               Vistacreate
             </h1>
@@ -550,7 +660,7 @@ const Plans = () => {
               Vistacreate
             </h1>
           </div>
-          <div className="flex flex-col items-center border overflow-hidden">
+          <div className="flex flex-col w-60 m-auto items-center border overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">Veed.io</h1>
             <div className="flex">
               <span className="text-lg">$</span>
@@ -569,7 +679,7 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="container mt-10">
+      <div className="container mt-10 m-auto">
         <div className="grid gap-x-4 grid-cols-1 md:grid-cols-3">
           <div className="border w-90 mx-auto flex flex-col items-center overflow-hidden">
             <h1 className="my-4 text-2xl font-bold tracking-widest">
@@ -631,7 +741,9 @@ const Plans = () => {
           </div>
         </div>
       </div>
-      <div className="container mt-10">
+
+
+      <div className="container mt-10 m-auto">
         <div className="grid gap-x-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div className="border w-80 mx-auto flex flex-col items-center overflow-hidden">
             <img

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { motion } from "framer-motion";
+
 
 const Home = () => {
 
@@ -83,21 +85,40 @@ const Home = () => {
                   SEO EXPRESSED!
                 </h1>
                 <button className="font-medium border mt-5 py-3 md:mb-40 px-6 bg-[#8d57f7] text-white text-lg rounded-3xl">
+                  {/* <a href="https://mail.google.com/" target="_main">
+                    Contact Now
+                  </a> */}
                   <a href="mailto:your_email_address@gmail.com" target="_main">
                     Contact Now
                   </a>
                 </button>
               </div>
-              <div className=" md:w-1/3 ">
+              <motion.div 
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            // delay: 1,
+                            duration: 0.3,
+                            ease: [0, 0.71, 0.2, 1.01],
+                            scale: {
+                              type: "spring",
+                              damping: 5,
+                              stiffness: 100,
+                              restDelta: 0.001
+                            }
+                          }}
+              // animate={{ y : 0 }} 
+              className=" md:w-1/3 
+              ">
                 <img className="" src="./images/_Downloader.webp" alt="logo" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </header>
           <div className=" ">
             <img id='header-img'
-              className=" mt-[100px] md:mt-[440px] w-full h-screen absolute inset-0"
+              className=" mt-[280px] md:mt-[440px] lg:mt-[100px] w-full h-screen absolute inset-0"
               src="./images/WhatsApp.jpeg"
               alt="logo"
             />
@@ -105,18 +126,18 @@ const Home = () => {
 
       <div className="h-[400px] bg-[#9e3ffd] relative">
         <div className="flex flex-col items-center justify-center h-full">
-          <h1 className="text-3xl text-white mt-8 sm:mt-16 md:mt-20 lg:mt-2">
+          <motion.h1 transition={{ duration: 1 }} initial={{ x : -800 }} animate={{ x : 0 }} className="text-3xl text-white mt-8 sm:mt-16 md:mt-20 lg:mt-2">
             - Launch Sale -
-          </h1>
-          <h1 className="text-6xl text-white py-6 font-bold sm:text-7xl md:text-8xl">
+          </motion.h1>
+          <motion.h1 transition={{ duration: 1 }} initial={{ x : 800 }} animate={{ x : 0 }} className="text-6xl text-white py-6 font-bold sm:text-7xl md:text-8xl">
             Get 30% Off
-          </h1>
-          <button
+          </motion.h1>
+          <motion.button transition={{ duration: 1 }} initial={{ y : -90 }} animate={{ y : 0 }}
             onClick={() => history('/plans')}
             className="border px-8 py-2 bg-white text-[#9e3ffd] text-lg sm:text-xl md:text-2xl lg:text-3xl"
           >
             Buy Now
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -226,7 +247,7 @@ const Home = () => {
               We’re Good with Numbers
             </h1>
             <ul className="flex flex-wrap justify-center -mx-4">
-              <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+              <li className="w-full sm:w-1/2 md:w-1/4 lg:px-24 px-4 mb-8">
                 <h1 className="text-5xl py-4 font-bold text-white ml-8 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   2
                 </h1>
@@ -234,7 +255,7 @@ const Home = () => {
                   Years of Trust
                 </h1>
               </li>
-              <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+              <li className="w-full sm:w-1/2 md:w-1/4 lg:px-24 px-4 mb-8">
                 <h1 className="text-5xl py-4 font-bold text-white ml-4 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   679
                 </h1>
@@ -242,7 +263,7 @@ const Home = () => {
                   Satisfied Customers
                 </h1>
               </li>
-              <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+              <li className="w-full sm:w-1/2 md:w-1/4 lg:px-24 px-4 mb-8">
                 <h1 className="text-5xl py-4 font-bold text-white ml-1 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   13
                 </h1>
@@ -250,7 +271,7 @@ const Home = () => {
                   Team Members
                 </h1>
               </li>
-              <li className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8">
+              <li className="w-full sm:w-1/2 md:w-1/4 lg:px-24 px-4 mb-8">
                 <h1 className="text-5xl py-4 font-bold text-white ml-1 mb-2 sm:text-5xl md:text-4xl flex items-center justify-center text-center">
                   34
                 </h1>
@@ -426,7 +447,7 @@ const Home = () => {
         <h1 className="text-4xl font-extrabold text-gray-700 tracking-normal text-center mb-10">
           Best Sellers
         </h1>
-        <div className="max-w-7xl mx-auto bg-white px-10 md:mx-50 py-16 flex flex-wrap justify-center">
+        <div className="max-w-8xl mx-auto bg-white px-10 md:mx-50 py-16 flex flex-wrap justify-center">
           <div
             id="sellers-1"
             className="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
@@ -468,6 +489,7 @@ const Home = () => {
               Sem Rush
             </h1>
           </div>
+          
           <div
             id="sellers-2"
             className="border mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden"
@@ -660,25 +682,26 @@ const Home = () => {
               Pickmonkey
             </h1>
           </div>
+          
         </div>
       </div>
 
-      <div id="individual" className="bg-[#f9f3ff] container" >
+      <div id="individual" className="bg-[#f9f3ff]" >
         <h1 className="flex items-center justify-center py-20 text-4xl font-bold">
           Individual Plan
         </h1>
-        <div className="bg-white py-20 md:p-20 max-w-7xl flex justify-center flex-wrap m-auto">
-        
-            <div className="border h-[640px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
+        <div className="bg-white py-20 md:p-20 max-w-8xl flex justify-center flex-wrap m-auto"> 
+
+            <div className="border text-center mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden">
               <img
                 src="https://static.wixstatic.com/media/d4d6f6_9ab7c271931f470794f99d26e00d5d84~mv2.webp"
                 alt="logo"
               />
-              <h1 className="my-4 font-extrabold tracking-widest text-2xl ">
+              <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl ">
                 Veed.io
               </h1>
-              <div className="flex">
-                <pre>$</pre>
+              <div className="flex justify-center items-center mb-4">
+                <pre className="text-2xl md:text-4xl">$</pre>
                 <h1 className="text-8xl font-bold ">10</h1>
               </div>
               <h1 className=" text-2xl">Every Month</h1>
@@ -690,17 +713,17 @@ const Home = () => {
               <h1 className="border-t-2 px-12 py-6 font-light">Veed.io</h1>
             </div>
         
-            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
+            <div className="border text-center mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden">
               <img
                 className=" mt-1"
                 src="https://static.wixstatic.com/media/d4d6f6_418267f6aa9c499192ab25919d3af73c~mv2.jpeg/v1/fill/w_296,h_200,fp_0.23_0.50,lg_1,q_80,enc_auto/d4d6f6_418267f6aa9c499192ab25919d3af73c~mv2.jpeg"
                 alt="logo"
               />
-              <h1 className="my-4 font-extrabold tracking-widest text-2xl ">
+              <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl ">
                 Semrush Trend
               </h1>
-              <div className="flex">
-                <pre>$</pre>
+              <div className="flex justify-center items-center mb-4">
+                <pre className="text-2xl md:text-4xl">$</pre>
                 <h1 className="text-8xl font-bold ">15</h1>
               </div>
               <h1 className=" text-2xl">Every Month</h1>
@@ -714,17 +737,17 @@ const Home = () => {
               </h1>
             </div>
         
-            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
+            <div className="border text-center mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden">
               <img
                 className=" mt-1"
                 src="https://static.wixstatic.com/media/d4d6f6_29e3cde9d89548ef82e09ec40219579b~mv2.png/v1/fill/w_289,h_200,fp_0.23_0.50,lg_1,q_85,enc_auto/d4d6f6_29e3cde9d89548ef82e09ec40219579b~mv2.png"
                 alt="logo"
               />
-              <h1 className="my-4 font-extrabold tracking-widest text-2xl ">
+              <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl">
                 Vistacreate
               </h1>
-              <div className="flex">
-                <pre>$</pre>
+              <div className="flex justify-center items-center mb-4">
+                <pre className="text-2xl md:text-4xl">$</pre>
                 <h1 className="text-8xl font-bold ">10</h1>
               </div>
               <h1 className=" text-2xl">Every Month</h1>
@@ -736,17 +759,17 @@ const Home = () => {
               <h1 className="border-t-2 px-12 py-6 font-light">Vistacreate</h1>
             </div>
         
-            <div className="border h-[600px] w-60 flex flex-col items-center overflow-hidden px-5 mx-5">
+            <div className="border text-center mb-10 md:mx-6 md:w-1/3 lg:w-1/5 md:flex-grow-0 md:flex-shrink-0 overflow-hidden">
               <img
                 className=" mt-1"
                 src="https://static.wixstatic.com/media/d4d6f6_a0591139935f48458ae13333baf6a399~mv2.jpg/v1/fill/w_280,h_200,fp_0.23_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d4d6f6_a0591139935f48458ae13333baf6a399~mv2.jpg"
                 alt="logo"
               />
-              <h1 className="my-4 font-extrabold tracking-widest text-2xl ">
+              <h1 className="my-4 font-extrabold text-gray-700 tracking-widest text-center text-2xl ">
                 SpyFu
               </h1>
-              <div className="flex">
-                <pre>$</pre>
+              <div className="flex justify-center items-center mb-4">
+                <pre className="text-2xl md:text-4xl">$</pre>
                 <h1 className="text-8xl font-bold">5</h1>
               </div>
               <h1 className=" text-2xl">Every Month</h1>
