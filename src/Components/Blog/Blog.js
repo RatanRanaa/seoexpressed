@@ -1,13 +1,28 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
 const Blog = () => {
   return (
     <div className=" ">
-      <div className="sm:ml-0 md:ml-20 lg:ml-60 sm:mt-10 md:mt-20">
+      <motion.div
+       initial={{ opacity: 0, scale: 0.5 }}
+       animate={{ opacity: 1, scale: 1 }}
+       transition={{
+         // delay: 1,
+         duration: 0.3,
+         ease: [0, 0.71, 0.2, 1.01],
+         scale: {
+           type: "spring",
+           damping: 5,
+           stiffness: 100,
+           restDelta: 0.001
+         }
+       }}
+       className="sm:ml-0 md:ml-20 lg:ml-60 sm:mt-10 md:mt-20">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
           All Posts
         </h1>
-      </div>
+      </motion.div>
 
       <div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">

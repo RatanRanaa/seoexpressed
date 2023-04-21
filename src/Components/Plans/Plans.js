@@ -1,15 +1,44 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const Plans = () => {
   return (
     <div>
       <div className="lg:flex lg:flex-col lg:items-center">
-        <h1 className="text-gray-700 text-4xl md:text-6xl lg:text-8xl font-extrabold flex items-center justify-center mt-16 lg:mt-48">
+        <motion.h1 
+                                  initial={{ opacity: 0, scale: 0.5 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  transition={{
+                                    // delay: 1,
+                                    duration: 0.3,
+                                    ease: [0, 0.71, 0.2, 1.01],
+                                    scale: {
+                                      type: "spring",
+                                      damping: 5,
+                                      stiffness: 100,
+                                      restDelta: 0.001
+                                    }
+                                  }}
+        className="text-gray-700 text-4xl md:text-6xl lg:text-8xl font-extrabold flex items-center justify-center mt-16 lg:mt-42">
           Choose your pricing
-        </h1>
-        <h1 className="text-gray-700 text-4xl md:text-6xl lg:text-8xl font-extrabold flex items-center justify-center ">
+        </motion.h1>
+        <motion.h1
+                                  initial={{ opacity: 0, scale: 0.5 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  transition={{
+                                    // delay: 1,
+                                    duration: 0.3,
+                                    ease: [0, 0.71, 0.2, 1.01],
+                                    scale: {
+                                      type: "spring",
+                                      damping: 5,
+                                      stiffness: 100,
+                                      restDelta: 0.001
+                                    }
+                                  }}
+        className="text-gray-700 text-4xl md:text-6xl lg:text-8xl font-extrabold flex items-center justify-center ">
           plan
-        </h1>
+        </motion.h1>
         <p className="text-gray-700 font-normal text-lg md:text-4xl flex items-center justify-center py-5 lg:py-10">
           Find one that works for you
         </p>

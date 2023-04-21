@@ -333,7 +333,8 @@ const Navbar = () => {
                   target="_main"
                   className=" mb-10 bottom-0 left-0 right-0 p-4 text-white bg-blue-500 hover:bg-blue-600 ml-4 font-bold"
                 >
-                  <a href="mailto:your_email_address@gmail.com">Contact Now</a> 
+                  {/* <a href="mailto:your_email_address@gmail.com">Contact Now</a>  */}
+                  <a href="https://mail.google.com">Contact Now</a> 
                 </button>
               </div>
             </div>
