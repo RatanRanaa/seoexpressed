@@ -6,36 +6,36 @@ const Plans = () => {
     <div>
       <div className="lg:flex lg:flex-col lg:items-center">
         <motion.h1 
-                                  initial={{ opacity: 0, scale: 0.5 }}
-                                  animate={{ opacity: 1, scale: 1 }}
-                                  transition={{
-                                    // delay: 1,
-                                    duration: 0.3,
-                                    ease: [0, 0.71, 0.2, 1.01],
-                                    scale: {
-                                      type: "spring",
-                                      damping: 5,
-                                      stiffness: 100,
-                                      restDelta: 0.001
-                                    }
-                                  }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          // delay: 1,
+          duration: 0.3,
+          ease: [0, 0.71, 0.2, 1.01],
+          scale: {
+            type: "spring",
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001
+          }
+        }}
         className="text-gray-700 text-4xl md:text-6xl lg:text-8xl font-extrabold flex items-center justify-center mt-16 lg:mt-42">
           Choose your pricing
         </motion.h1>
         <motion.h1
-                                  initial={{ opacity: 0, scale: 0.5 }}
-                                  animate={{ opacity: 1, scale: 1 }}
-                                  transition={{
-                                    // delay: 1,
-                                    duration: 0.3,
-                                    ease: [0, 0.71, 0.2, 1.01],
-                                    scale: {
-                                      type: "spring",
-                                      damping: 5,
-                                      stiffness: 100,
-                                      restDelta: 0.001
-                                    }
-                                  }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          // delay: 1,
+          duration: 0.3,
+          ease: [0, 0.71, 0.2, 1.01],
+          scale: {
+            type: "spring",
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001
+          }
+        }}
         className="text-gray-700 text-4xl md:text-6xl lg:text-8xl font-extrabold flex items-center justify-center ">
           plan
         </motion.h1>
@@ -44,7 +44,21 @@ const Plans = () => {
         </p>
       </div>
 
-      <div>
+      <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+       animate={{ opacity: 1, scale: 1 }}
+       transition={{
+         // delay: 1,
+         duration: 0.3,
+         ease: [0, 0.71, 0.2, 1.01],
+         scale: {
+           type: "spring",
+           damping: 8,
+           stiffness: 100,
+           restDelta: 0.001
+         }
+       }}
+      >
         <div className="flex flex-col md:flex-row md:justify-center">
           <div className="border mx-2 h-full md:w-80 flex flex-col items-center overflow-hidden mb-4 md:mb-0 ">
             <h1 className="my-4 text-2xl font-bold tracking-widest">
@@ -154,7 +168,7 @@ const Plans = () => {
             </h1>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div>
         <div className="flex flex-col md:flex-row md:justify-center mt-10">
